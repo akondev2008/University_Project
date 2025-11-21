@@ -1,71 +1,19 @@
-﻿// Start7.2_calculus_func.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Start8.2_fibanaci.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 using namespace std;
-int number()
-{
-	int a;
-	cout << "Введите число: ";
-	cin >> a;
-    return a;
-}
-int sum(int a, int b)
-{
-	return a + b;
-}
-int min(int a, int b)
-{
-	return a - b;
-}
-int umnojenie(int a, int b)
-{
-	return a * b;
-}
-int delenie(int a, int b)
-{
-	return a / b;
-}
-int stepen(int a, int b)
-{
-	int result = 1;
-	for (int i = 0; i < b; i++)
-	{
-		result = result * a;
+int fibanaci(int num) {
+	if (num <= 1) {
+		return 1;
 	}
-	return result;
-}
-int modul(int a, int b)
-{
-	if (a < 0) a = -a;
-	if (b < 0) b = -b;
-	return a + b;
-}
-int koren(int a, int b)
-{
-	int test = 1, finder;
-	while (stepen(test, b))
-	{
-		finder = a - stepen(test, b);
-		if (finder <= 3+(2*b))
-			return cout << (test) << "внутри корня" << (a - finder) << endl;
-		else
-		{
-			test++;
-		}
-	}
+	else { cout << endl << num;return fibanaci(num - 1) + fibanaci(num - 2); }
 }
 int main()
 {
-	int a = number(), b = number();
-	cout << "Сумма: " << sum(a, b) << endl;
-	cout << "Разность: " << min(a, b) << endl;
-	cout << "Произведение: " << umnojenie(a, b) << endl;
-	cout << "Частное: " << delenie(a, b) << endl;
-	cout << "Степень: " << stepen(a, b) << endl;
-	cout << "Модуль: " << modul(a, b) << endl;
-	koren(a, b);
-	return 0;
+	int num;
+	cin >> num;
+	cout << fibanaci(num);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
