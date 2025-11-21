@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	float a, b, c, d, e;
-	cout << "how many kg of apples you want?"<< /n<<" 1 kg of apples is 2500" << endl;cin >> a;
+	cout << "how many kg of apples you want?" << endl << " 1 kg of apples is 2500" << endl;cin >> a;
 	cout << "how many kg of onions you want??" << endl;cin >> b;
 	cout << "how many kg of bananas you want??" << endl;cin >> c;
 	cout << "how many kg of potatoes you want??" << endl;cin >> d;

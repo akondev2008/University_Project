@@ -8,7 +8,7 @@ int main()
 	int day_time;
 	cout << "Enter time: ";
 	cin >> day_time;
-	if day_time < 0 || day_time > 24
+	if (day_time < 0 || day_time > 24)
 	{
 		cout << "Error";
 	}
